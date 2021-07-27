@@ -16,7 +16,7 @@
 
         <div class="row">
             <h1>Add your product here</h1>
-            <a class="btn btn-success" href="">Add your product</a>
+            <a class="btn btn-success" href="{{ route("product.index") }}">Add your product</a>
         </div>
     </div>
 
