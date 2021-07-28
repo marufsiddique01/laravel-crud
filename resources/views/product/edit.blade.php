@@ -20,7 +20,7 @@
 
 
 
-<form action="" method="POST" enctype="multipart/form-data">
+<form action="{{ url('update/product/'.$product->id) }}" method="POST" enctype="multipart/form-data">
     @csrf
 
     <div class="row">
@@ -57,6 +57,7 @@
             <div class="form-group">
                 <strong>Product Old Image:</strong>
                 <img src="{{ URL::to($product->product_image) }}" height="250px" width="250px" />
+                <input type="hidden" name="old_picture" value="{{$product->product_image}}">
             </div>
         </div>
 

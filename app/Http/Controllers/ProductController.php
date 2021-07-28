@@ -60,4 +60,48 @@ class ProductController extends Controller
         $product = DB::table('products')->where('id', $id)->first();
         return view('product.edit', compact('product'));
     }
+
+    public function update(Request $request, $id)
+    {
+
+
+        $oldpicture = $request->old_picture;
+
+        $data = array();
+        $data['product_name'] = $request->product_name;
+        $data['product_code'] = $request->product_code;
+        $data['details'] = $request->details;
+
+
+
+        $image = $request->file('product_image');
+
+        if ($image) {
+            unlink($oldpicture);
+            $image_name = date('dmy_H_s_i');
+            $ext = strtolower($image->getClientOriginalExtension());
+            $image_full_name = $image_name . '.' . $ext;
+            $upload_path = 'public/media/';
+            $image_url = $upload_path . $image_full_name;
+            $success = $image->move($upload_path, $image_full_name);
+
+
+
+            $data['product_image'] = $image_url;
+            $product = DB::table('products')->where('id', $id)->update($data);
+            return redirect()->route('product.index')
+                ->with('success', 'Product updated successfully');
+        }
+    }
+
+
+    public function delete(Request $request, $id)
+    {
+        $data = DB::table('products')->where('id', $id)->first();
+        $image = $data->product_image;
+        unlink($image);
+        $product = DB::table('products')->where('id', $id)->delete();
+        return redirect()->route('product.index')
+            ->with('success', 'Product deleted successfully');
+    }
 }

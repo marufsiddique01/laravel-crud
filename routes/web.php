@@ -25,6 +25,12 @@ Route::post('store', 'ProductController@store')->name('product.store');
 
 Route::get('edit/product/{id}', 'ProductController@edit');
 
+Route::post('update/product/{id}', 'ProductController@update');
+
+Route::get('delete/product/{id}', 'ProductController@delete');
+
+
+
 
 
 Auth::routes();
