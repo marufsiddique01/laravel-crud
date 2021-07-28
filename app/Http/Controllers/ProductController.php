@@ -50,4 +50,17 @@ class ProductController extends Controller
 
         }
     }
+
+
+
+    public function edit($id){
+
+        $product = DB::table('products')->where('id',$id)->first();
+        return view('product.edit',compact('product'));
+
+
+
+    }
+
+
 }

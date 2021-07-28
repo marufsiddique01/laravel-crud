@@ -23,6 +23,8 @@ Route::get('create', 'ProductController@create')->name('product.create');
 
 Route::post('store', 'ProductController@store')->name('product.store');
 
+Route::get('edit/product/{id}', 'ProductController@edit');
+
 
 
 Auth::routes();
