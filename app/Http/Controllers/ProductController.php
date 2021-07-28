@@ -109,6 +109,6 @@ class ProductController extends Controller
     public function details($id)
     {
         $data = DB::table('products')->where('id', $id)->first();
-        return view('product.show', compact('data'))
+        return view('product.show', compact('data'));
     }
 }
