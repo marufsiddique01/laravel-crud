@@ -30,10 +30,10 @@
         <th width="150px">
             Product Name
         </th>
-        <th width="150px">
+        <th width="100px">
             Product Code
         </th>
-        <th width="200px">
+        <th width="250px">
             Details
         </th>
         <th width="150px">
@@ -47,7 +47,7 @@
     <tr>
         <td>{{ $pro -> product_name  }}</td>
         <td>{{ $pro -> product_code }}</td>
-        <td>{{ $pro -> details }}</td>
+        <td>{{str_limit($pro -> details, $limit = 200)}}</td>
         <td>
             <img src="{{ URL::to($pro->product_image) }}" height="100px" width="100px" />
         </td>
