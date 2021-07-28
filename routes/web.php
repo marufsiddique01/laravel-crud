@@ -29,6 +29,8 @@ Route::post('update/product/{id}', 'ProductController@update');
 
 Route::get('delete/product/{id}', 'ProductController@delete');
 
+Route::get('details/product/{id}', 'ProductController@details');
+
 
 
 

@@ -52,13 +52,9 @@
             <img src="{{ URL::to($pro->product_image) }}" height="100px" width="100px" />
         </td>
         <td>
-            <a class="btn btn-info" href="">
+            <a class="btn btn-info" href="{{ URL::to('details/product/'.$pro->id) }}">
                 Show
             </a>
-
-
-
-
 
             <a class="btn btn-primary" href="{{ URL::to('edit/product/'.$pro->id) }}">
                 Edit
