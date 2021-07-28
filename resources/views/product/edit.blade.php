@@ -16,6 +16,10 @@
     </div>
 </div>
 
+
+
+
+
 <form action="" method="POST" enctype="multipart/form-data">
     @csrf
 
@@ -23,38 +27,22 @@
         <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group">
                 <strong>Product Name:</strong>
-                <input
-                    type="text"
-                    name="product_name"
-                    class="form-control"
-                    value="{{ $product->product_name }}"
-                />
+                <input type="text" name="product_name" class="form-control" value="{{ $product->product_name }}" />
             </div>
         </div>
 
         <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group">
                 <strong>Product Code:</strong>
-                <input
-                    type="text"
-                    name="product_code"
-                    class="form-control"
-                    value="{{ $product->product_code }}"
-                />
+                <input type="text" name="product_code" class="form-control" value="{{ $product->product_code }}" />
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Details:</strong>
-                <textarea
-                    class="form-control"
-                    name="details"
-                    style="height: 150px;"
-                    placeholder="Enter Details"
-                    >{{ $product->details}}
-            </textarea
-                >
+                <textarea class="form-control" name="details" style="height: 150px;" placeholder="Enter Details">{{ $product->details}}
+            </textarea>
             </div>
         </div>
 
@@ -68,11 +56,7 @@
         <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group">
                 <strong>Product Old Image:</strong>
-                <img
-                    src="{{ URL::to($product->product_image) }}"
-                    height="250px"
-                    width="250px"
-                />
+                <img src="{{ URL::to($product->product_image) }}" height="250px" width="250px" />
             </div>
         </div>
 

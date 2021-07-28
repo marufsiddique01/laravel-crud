@@ -22,6 +22,9 @@
 
 @endif
 
+
+
+
 <table class="table table-bordered">
     <tr>
         <th width="150px">
@@ -46,20 +49,18 @@
         <td>{{ $pro -> product_code }}</td>
         <td>{{ $pro -> details }}</td>
         <td>
-            <img
-                src="{{ URL::to($pro->product_image) }}"
-                height="100px"
-                width="100px"
-            />
+            <img src="{{ URL::to($pro->product_image) }}" height="100px" width="100px" />
         </td>
         <td>
             <a class="btn btn-info" href="">
                 Show
             </a>
-            <a
-                class="btn btn-primary"
-                href="{{ URL::to('edit/product/'.$pro->id) }}"
-            >
+
+
+
+
+
+            <a class="btn btn-primary" href="{{ URL::to('edit/product/'.$pro->id) }}">
                 Edit
             </a>
             <a class="btn btn-danger" href="">

@@ -23,36 +23,22 @@
         <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group">
                 <strong>Product Name:</strong>
-                <input
-                    type="text"
-                    name="product_name"
-                    class="form-control"
-                    placeholder="Product Name"
-                />
+                <input type="text" name="product_name" class="form-control" placeholder="Product Name" />
             </div>
         </div>
 
         <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group">
                 <strong>Product Code:</strong>
-                <input
-                    type="text"
-                    name="product_code"
-                    class="form-control"
-                    placeholder="Product Code"
-                />
+                <input type="text" name="product_code" class="form-control" placeholder="Product Code" />
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Details:</strong>
-                <textarea
-                    class="form-control"
-                    name="details"
-                    style="height: 150px;"
-                    placeholder="Enter Details"
-                ></textarea>
+                <textarea class="form-control" name="details" style="height: 150px;"
+                    placeholder="Enter Details"></textarea>
             </div>
         </div>
 
