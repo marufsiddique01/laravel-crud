@@ -68,4 +68,6 @@
     @endforeach
 </table>
 
+{!! $product->links() !!}
+
 @endsection

@@ -11,7 +11,7 @@ class ProductController extends Controller
     public function index()
     {
 
-        $product = DB::table('products')->get();
+        $product = DB::table('products')->latest()->paginate(5);
 
         return view("product.index", compact('product'));
     }
